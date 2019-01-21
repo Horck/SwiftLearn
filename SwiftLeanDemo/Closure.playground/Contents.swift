@@ -61,7 +61,7 @@ var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 print(customersInLine.count)
 // Prints "5"
 
-let customerProvider = { customersInLine.remove(at: 0) } // 这里只是延迟调用 
+let customerProvider = { customersInLine.remove(at: 0) } // 这里只是延迟调用
 print(customersInLine.count)
 // Prints "5"
 
