@@ -15,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		761277DF21FAB21E004DF50E /* Subscripts.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subscripts.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		761277E021FAF2D8004DF50E /* Inheritance.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Inheritance.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		761EE81521EF16950039A2ED /* Function.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Function.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7646965421F076FE00E08716 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		764B0D9421F9A3E400ACD256 /* Methods.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Methods.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -82,6 +84,8 @@
 				7650233021F807D200277F5C /* ClassAndStructure.playground */,
 				7650233121F8524A00277F5C /* Properties.playground */,
 				764B0D9421F9A3E400ACD256 /* Methods.playground */,
+				761277DF21FAB21E004DF50E /* Subscripts.playground */,
+				761277E021FAF2D8004DF50E /* Inheritance.playground */,
 			);
 			path = SwiftLeanDemo;
 			sourceTree = "<group>";
