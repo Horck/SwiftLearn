@@ -51,6 +51,7 @@ let halfGray = Color(white: 0.5)
 // 无实际参数标签的初始化器形式参数
 struct Celsius1 {
     var temperatureInCelsius: Double
+        
     init(fromFahrenheit fahrenheit: Double) {
         temperatureInCelsius = (fahrenheit - 32.0) / 1.8
     }
@@ -62,6 +63,7 @@ struct Celsius1 {
     }
 }
 let bodyTemperature = Celsius1(37.0)
+
 
 
 // 在初始化中分配常量属性
