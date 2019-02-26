@@ -73,3 +73,72 @@ struct Stack<Element> {
         return items.removeLast()
     }
 }
+
+// 初始化String类型
+var stackOfStrings = Stack<String>()
+stackOfStrings.push("uno")
+stackOfStrings.push("dos")
+stackOfStrings.push("tres")
+stackOfStrings.push("cuatro")
+
+
+// 类型约束
+/*
+ 在一个类型形式参数名称后面放置一个类或者协议作为形式参数列表的一部分，并用冒号隔开，以写出一个类型约束。下面展示了一个泛型函数类型约束的基本语法（和泛型类型的语法相同）：
+ */
+
+class  SomeClass {
+    
+}
+
+protocol SomeProtocol {
+    
+}
+
+func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
+    // function body goes here
+}
+
+
+// 上面的假想函数有两个形式参数。第一个类型形式参数， T ，有一个类型约束要求 T 是 SomeClass 的子类。第二个类型形式参数， U ，有一个类型约束要求 U 遵循 SomeProtocol 协议。
+
+
+
+/*类型约束的应用 */
+
+func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
+}
+
+// 约束都是T 类型 且遵守Equatable 协议（才能用 == 比较）
+func findIndex1<T: Equatable>(of valueToFind: T, in array:[T]) -> Int? {
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
+}
+
+/*关联类型*/
+
+// 定义一个协议时，有时在协议定义里声明一个或多个关联类型是很有用的。关联类型给协议中用到的类型一个占位符名称。直到采纳协议时，才指定用于该关联类型的实际类型。关联类型通过 associatedtype 关键字指定。
+
+protocol Container {
+    associatedtype ItemType
+    mutating func append(_ item: ItemType)
+    var count: Int { get }
+    subscript(i: Int) -> ItemType { get }
+}
+
+
+// 必须能够通过 append(_:) 方法向容器中添加新元素；
+// 必须能够通过一个返回 Int 值的 count 属性获取容器中的元素数量；
+// 必须能够通过 Int 索引值的下标取出容器中每个元素。
+
+
